@@ -8,6 +8,8 @@ env:
   MONGODB_DB_NAME: gha-demo
 jobs:
   test:
+    environment: testing # GH/settings/environment
+    # Uses Env specific secrets instead of Repo secrets
     env:
       ONLY_AVAIBLE_IN_TEST: "testing env variable value"
       MOGODB_CLUSTER_ADDRESS: "https://some.url.com"
