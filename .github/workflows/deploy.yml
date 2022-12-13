@@ -10,8 +10,10 @@ jobs:
   test:
     env:
       ONLY_AVAIBLE_IN_TEST: "testing env variable value"
-      MONGODB_USERNAME: "someValue"
-      MONGODB_PASSWORD: "someValue"
+      MOGODB_CLUSTER_ADDRESS: "https://some.url.com"
+      MONGODB_USERNAME: someValue # not ideal storage
+      MONGODB_PASSWORD: someValue # not ideal storage
+      PORT: 8080
     environment: testing
     runs-on: ubuntu-latest
     steps:
