@@ -4,8 +4,14 @@ on:
     branches:
       - main
       - dev
+env:
+  MONGODB_DB_NAME: gha-demo
 jobs:
   test:
+    env:
+      ONLY_AVAIBLE_IN_TEST: "testing env variable value"
+      MONGODB_USERNAME: "someValue"
+      MONGODB_PASSWORD: "someValue"
     environment: testing
     runs-on: ubuntu-latest
     steps:
@@ -29,5 +35,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Output information
-        run: |        
+        run: |
           echo "..."
